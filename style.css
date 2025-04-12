@@ -1,80 +1,101 @@
-/* Mengatur font untuk semua judul */
-h1, h2, h3 {
-    font-family: 'Amiri', serif; /* Gunakan font Amiri */
-}
-
-/* Contoh pengaturan untuk setiap level judul */
-h1 {
-    font-size: 36px; /* Ukuran teks besar untuk judul utama */
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 30px; /* Ukuran sedang untuk sub-judul */
-    margin-bottom: 15px;
-}
-
-h3 {
-    font-size: 24px; /* Ukuran kecil untuk sub-sub-judul */
-    margin-bottom: 10px;
-}
-
-/*Header*/
+/* Reset default styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Styling umum untuk body */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5e6c9;
-    color: #333;
-    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FAF0E6; /* Warna latar belakang halaman */
+    color: black;
+    line-height: 1.6; /* Spasi antar baris teks */
 }
 
+/* Styling untuk header utama */
 .site-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: #a87b4d;
-    padding: 10px 20px;
-    border-radius: 10px;
-    margin: 20px;
-}
-
-.logo img {
-    width: 100px; /* Sesuaikan ukuran logo sesuai kebutuhan */
-    height: auto; /* Menjaga proporsi gambar */
-}
-
-.main-navigation button {
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #66331a;
-    padding: 10px 20px;
-    border: none;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 30px;
+    background-color: #B78259;
     border-radius: 5px;
-    margin-left: 10px;
-    cursor: pointer;
 }
 
-.main-navigation button:hover {
-    background-color: #8c5a30;
+/* Styling untuk logo */
+.logo-header img {
+    height: 70px; /* Tinggi logo */
+    width: auto; /* Lebar otomatis sesuai proporsi */
+    padding: 5px;
 }
 
-/* Halaman Utama */
-main {
+/* Styling untuk menu navigasi */
+.nav-menu {
+    display: flex; /* Aktifkan flexbox untuk menu */
+    gap: 20px; /* Jarak antar item menu */
+    list-style: none; /* Hilangkan bullet points */
+}
+
+/* Styling untuk setiap item menu */
+.nav-item {
+    display: inline-block; /* Agar item menu berada dalam satu baris */
+}
+
+/* Styling untuk link di dalam menu */
+.nav-link {
+    text-decoration: none; /* Hilangkan garis bawah pada link */
+    color: white; /* Warna teks putih */
+    font-weight: bold; /* Teks tebal */
+    padding: 5px; /* Padding untuk area klik */
+    background-color: #5B2C2C; /* Latar belakang hitam */
+    border-radius: 5px; /* Sudut melengkung */
+    transition: background-color 0.3s ease; /* Efek hover yang halus */
+}
+
+/* Efek hover pada link */
+.nav-link:hover {
+    background-color: #C76D00; /* Ubah warna latar saat dihover */
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+      }
+    
+    .nav-item {
+        gap: 10px; /* Jarak antar kartu */
+      }
+    
+    .nav-link {
+          width: calc(33.33% - 20px); /* Lebar kartu untuk desktop */
+          background-color: #B78259;
+      }
+
+    .logo-header img {
+        margin: 10px;
+    }
+}
+
+/* Main Section */
+.main-section {
     text-align: center;
     margin-top: 50px;
 }
 
-main h1{
+.store-header h1{
     background-color: #B78259;
 }
 
-h1 {
+.store-title{
     font-size: 36px;
     font-weight: bold;
     color: #fff;
@@ -84,316 +105,356 @@ h1 {
     display: inline-block; /* Menambahkan ini */
 }
 
-p {
-    font-size: 20px;
+.text-main{
     font-weight: bold;
     color: #333;
     margin-bottom: 30px;
 }
 
-button#pesan-sekarang {
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #a87b4d;
+.tombol-main {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.pesan-sekarang {
+    color: white;
     padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    display: inline-block; 
+    background-color: #C76D00;
+    text-decoration: none;
+}
+
+.pesan-sekarang:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Bayangan halus */
+    transform: translateY(-5px); /* Mengangkat tombol sedikit ke atas */
 }
 
 button#pesan-sekarang:hover {
     background-color: #C76D00;
 }
 
+@media (max-width: 425px){
+    .store-title {
+        padding: 15px 10px;
+        font-size: 20px;
+    }
 
-/*Halaman review*/
+}
 
+/* Review Section */
 .review-section {
-    margin-top: 100px;
-    background-color: #a87b4d;
-    padding: 10px 0;
-    text-align: center;
-    color: #fff;
+    background-color: #B78259;
+    color: white;
 }
 
 .rating-section {
-    display: inline-flex;
-    align-items: center;
+    display: flex;
+    /* justify-content: space-around; */
     justify-content: center;
-}
-
-.rating-section span {
-    margin: 0 10px;
-}
-
-.stars {
-    display: flex;
-}
-
-.star {
-    width: 20px;
-    height: 20px;
-    background-color: #ccc;
-    margin-right: 5px;
-}
-
-.half-star {
-    width: 10px; /* Setengah lebar dari star biasa */
-}
-
-/*Halaman Tentang Store*/
-
-.about {
-    padding: 50px;
     text-align: center;
+    gap: 20px;
+    padding: 10px 5px;
 }
 
-.content-container {
+@media (max-width: 425px) {
+    .rating-section {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* About Section */
+.about-section {
+    background-color: #FAF0E6; /* Warna latar belakang krem */
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px; /* Memberi ruang di sekeliling konten */
 }
 
-.text-section h2 {
-    background-color: #a87b4d;
-    color: #fff;
-    padding: 10px 20px;
-    margin-bottom: 20px;
+.content-about {
+    flex: 1; /* Konten teks akan mengambil sebagian layar */
+    margin-right: 50px; /* Jarak antara konten teks dan video */
 }
 
-.text-section p {
-    font-size: 18px;
-    max-width: 500px;
+
+.judul-about span {
+    background-color: #B78259; /* Warna cokelat muda */
+    color: white; /* Teks putih */
+    padding: 10px 20px; /* Padding untuk membuat ruang di dalam kotak */
+    border-radius: 5px; /* Membuat sudut kotak sedikit melengkung */
+    padding-left: 20px;
+    display: inline-block; /* Kotak hanya mencakup teks */
 }
 
-.video-section {
-    position: relative;
-    width: 50%;
+.text-about {
+    margin-top: 20px; /* Jarak antara judul dan deskripsi */
+}
+
+.video-about-section {
+    flex: 1; /* Video akan mengambil sebagian layar */
+    /* display: flex; */
+    justify-content: center; /* Sentralisasi video secara horizontal */
+    align-items: center; /* Sentralisasi video secara vertikal */
 }
 
 .video-embed {
-    width: 100%;
-    height: 400px;
-    border: none;
+    max-width: 100%;
+    height: 200px;
+    flex-shrink: 0;
+    border: none; /* Menghilangkan garis batas iframe */
 }
 
-/*Halaman Benefit*/
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column; /* Susun konten secara vertikal */
+        align-items: stretch; /* Biarkan konten menyesuaikan lebar layar */
+    }
 
-.benefits-section {
+    .content-about {
+        margin-right: 0; /* Hilangkan margin kanan saat layout vertikal */
+        margin-bottom: 50px; /* Tambahkan margin bawah agar ada jarak dengan video */
+    }
+
+    .judul-about {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .text-about {
+        text-align: justify;
+    }
+
+    .video-about-section {
+        width: 100%; /* Pastikan video penuh lebar layar */
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* Benefit Section */
+.benefit-section {
+    background-color: #B78259;
+    padding-bottom: 20px;
+}
+
+.title-benefit {
+    padding: 20px;
     text-align: center;
-    padding: 50px;
-    background-color: #B78259; /* Warna latar belakang section */
-}
-
-.benefit-container {
-    padding: 20px;
-    border-radius: 5px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.benefit-container h1 {
-    font-size: 36px;
-    font-weight: bold;
     color: white;
+}
+
+.bg-poin-benefit {
+    background-color: #684931;
+    justify-content: space-evenly;
+    text-align: center;
     margin-bottom: 20px;
-}
-
-.benefit-row {
+    margin: 20px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 50px;
+    gap: 10px;
 }
 
-.benefit-item {
-    width: 30%;
-    background-color: #f5e6c9; /* Warna latar belakang item */
+.halaman-poin-benefit {
+    background-color: #FFE5D1;
     padding: 20px;
-    border-radius: 5px;
+    margin: 0;
+    width: 300px;
+    height: 500px;
+}
+
+.poin-benefit {
+    justify-content: center;
+    /* text-align: center; */
+    display: flex;
+    gap: 10px;
+}
+
+.sub-poin-benefit {
+    text-align: justify;
+    margin: 20px;
+}
+.kotak-icon-benefit {
+    background-color: #C76D00;
+    display: flex; /* Mengubah kotak menjadi flex container */
+    justify-content: center; /* Mengatur posisi horizontal */
+    align-items: center; /* Mengatur posisi vertikal */
+    height: 50px;
+    width: 50px;
+}
+
+.title-poin-benefit {
+    margin-top: 7px;
+    font-size: 18px;
+}
+
+.list-benefit {
+    margin-top: 20px;
+    justify-content: left;
     text-align: left;
 }
 
-.benefit-item img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
+@media (max-width: 768px) {
+    .bg-poin-benefit {
+        display: block; /* atau grid */
+        margin: 15px; /* mengurangi margin di mobile */
+    }
+    
+    .halaman-poin-benefit {
+        height: 300px;
+        width: auto; /* lebar penuh di mobile */
+        margin-bottom: 20px; /* memberi jarak antar kartu */
+    }
 }
 
-.benefit-item h3 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #66331a;
-    margin-bottom: 10px;
-}
-
-.benefit-item p {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.benefit-item ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-/*Halaman Testimoni*/
-
-/* Testimonials Section */
+/* Testimonial Section */
 .testimonials-section {
-    text-align: center;
-    padding: 50px;
-    background-color: #f5e6c9; /* Warna latar belakang bagian */
-    margin: 20px 0; /* Memberi ruang di atas dan bawah */
+    background-color: #FAF0E6;
+    padding: 40px 20px; /* Padding atas-bawah dan kiri-kanan */
 }
 
-.testimonials-section h2 {
-    font-size: 36px;
-    font-weight: bold;
-    color: #66331a;
-    margin-bottom: 40px; /* Ruang antara judul dan konten */
+.title-testimonials {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px; /* Jarak antara judul dan konten */
 }
 
 .testimonial-container {
     display: flex;
-    justify-content: space-around;
-    align-items: stretch; /* Memastikan semua box memiliki tinggi yang sama */
-    flex-wrap: wrap; /* Membungkus item jika layar kecil */
-    gap: 20px; /* Jarak antar box */
+    justify-content: space-around; /* Memastikan jarak merata antar kotak */
+    gap: 20px; /* Jarak antar kotak */
+
 }
 
 .testimonial-item {
-    width: calc(22% - 20px); /* Menghitung lebar dengan jarak */
-    background-color: #a87b4d;
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px; /* Sudut lebih melengkung */
+    background-color: #B78259;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk kesan modern */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi hover */
+    border-radius: 10px;
+    padding: 20px; /* Padding dalam kotak */
+    width: calc(25% - 40px); /* Lebar kotak, disesuaikan dengan ruang */
+    box-sizing: border-box; /* Agar padding nggak ngelebihin ukuran kotak */
 }
 
-.testimonial-item:hover {
-    transform: translateY(-10px); /* Mengangkat box saat dihover */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Bayangan lebih tebal saat dihover */
+.testimonial-container img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%; /* Bikin gambar jadi lingkaran */
+    margin-bottom: 10px; /* Jarak antara gambar dan teks */
 }
 
-.testimonial-item img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%; /* Gambar berbentuk lingkaran */
-    margin-bottom: 15px;
-    border: 3px solid #fff; /* Bingkai putih di sekitar gambar */
-}
-
-.testimonial-item h3 {
-    font-size: 24px;
+.name {
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Jarak antara nama dan profesi */
 }
 
-.testimonial-item .job-title {
-    font-size: 16px;
-    font-weight: bold;
-    color: #f5e6c9; /* Warna teks lebih kontras */
-    margin-bottom: 10px;
+.profession {
+    font-style: italic;
+    margin-bottom: 10px; /* Jarak antara profesi dan testimonial */
 }
 
-.testimonial-item p {
-    font-size: 18px;
-    margin-bottom: 10px;
+.review {
+    font-size: 14px; /* Ukuran font untuk testimonial */
 }
 
-/*Halaman FAQ*/
+@media (max-width: 768px) {
+    .testimonial-container {
+        flex-direction: column; /* Mengubah layout menjadi kolom */
+        align-items: center; /* Memastikan semua item berada di tengah */
+        gap: 20px; /* Jarak antar kotak */
+    }
 
+    .testimonial-item {
+        width: 100%; /* Lebar kotak menjadi full-width */
+        max-width: 400px; /* Membatasi lebar maksimum agar tidak terlalu lebar */
+    }
+}
+
+/* FAQ Section */
 .faq-section {
-    background-color: #a87b4d;
-    color: #fff;
-    padding: 50px;
+    background-color: #B78259;
+    padding: 40px 20px; /* Padding atas-bawah dan kiri-kanan */
+}
+
+.title-faq {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 30px; /* Jarak antara judul dan konten */
     text-align: center;
 }
 
-.text-section-faq h2 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 40px;
+.kotak-faq {
+    padding: 20px 10px;
+    margin: 20px;
+    background-color: rgba(217, 217, 217, 0.50);
+    border-radius: 10px;
+    flex-direction: column;
+    gap: 50px;
 }
 
-.faq-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.faq-item {
-    margin-bottom: 20px;
-}
-
-.faq-item h3 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.faq-item p {
-    font-size: 18px;
-}
-
-/* Halaman Donasi*/
-
-.donatur-section {
-    text-align: center;
-    padding: 50px;
-    background-color: #fff; /* Warna latar belakang section */
-}
-
-.content-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.text-section h1 {
-    font-size: 36px;
-    font-weight: bold;
-    color: #66331a;
-    margin-bottom: 20px;
-}
-
-.text-section p {
-    font-size: 18px;
-    max-width: 500px;
-    margin-bottom: 20px;
-}
-
-.button-section {
-    width: 30%;
-}
-
-#donatur-sekarang {
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #a87b4d; /* Warna dasar tombol */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    transition: all 0.3s ease; /* Animasi halus untuk efek hover */
-}
-
-/* Efek saat tombol di-hover */
-#donatur-sekarang:hover {
-    background-color: #8c5a30; /* Warna lebih gelap saat di-hover */
+.kotak-faq:hover {
+    background-color: #E2C38D;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Bayangan halus */
     transform: translateY(-5px); /* Mengangkat tombol sedikit ke atas */
 }
 
-/**/
-/* Reset margin dan padding */
+/* Donation Section */
+.donation-section {
+    background-color: white;
+    padding: 40px 20px; /* Padding atas-bawah dan kiri-kanan */
+}
+
+.layout-donation {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 50px;
+}
+
+.title-donation {
+    text-align: center;
+    padding-left: 10px;
+}
+
+.sub-donation {
+    padding: 15px;
+    margin: 20px;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.button-donation {
+    text-align: center;
+    background-color: #C76D00;
+    color: white;
+    border-radius: 10px;
+    padding: 25px 20px;
+    margin: 50px;
+}
+
+.button-donation:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Bayangan halus */
+    transform: translateY(-5px); /* Mengangkat tombol sedikit ke atas */
+}
+
+@media (max-width: 768px) {
+    .layout-donation {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .button-donation {
+        padding: 10px 5px;
+        margin: 10px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 425px) {
+    .button-donation {
+        font-size: 15px;
+    }
+}
 
 .site-footer {
     background-color: #a87b4d;
@@ -412,6 +473,7 @@ button#pesan-sekarang:hover {
     background-color: rgba(217, 217, 217, 0.50); /* Warna latar belakang kontainer */
     padding: 20px;
     border-radius: 5px;
+    gap: 50px;
 }
 
 .footer-section {
@@ -427,6 +489,7 @@ button#pesan-sekarang:hover {
 .footer-section p {
     font-size: 18px;
     margin-bottom: 20px;
+    text-align: justify;
 }
 
 .contact-item {
@@ -455,4 +518,53 @@ button#pesan-sekarang:hover {
 .footer-section ul li a {
     color: black;
     text-decoration: none;
+}
+
+/* Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-section {
+        width: 100%; /* Make each section full width */
+    }
+
+    .footer-section p {
+        text-align: justify;
+        padding: 5px;
+        height: auto;
+        width: 100%; /* Ensure text wraps properly */
+    }
+
+    
+
+    .contact-item span:first-child {
+        margin: 0 5px; /* Adjust spacing around icons */
+    }
+}
+
+/* Mobile (max-width: 425px) */
+@media (max-width: 425px) {
+    .footer-container {
+        padding: 20px 10px; /* Reduce padding for smaller screens */
+    }
+
+    .footer-section h4 {
+        font-size: 20px; /* Smaller font size for headings */
+    }
+
+    .footer-section p {
+        font-size: 16px; /* Smaller font size for paragraphs */
+    }
+
+
+    .contact-item span:first-child {
+        margin: 5px 0; /* Adjust spacing for vertical stacking */
+    }
+
+    .footer-section ul li {
+        font-size: 14px; /* Smaller font size for legal pages */
+    }
 }
