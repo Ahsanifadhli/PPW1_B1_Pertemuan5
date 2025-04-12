@@ -1,96 +1,125 @@
 <!DOCTYPE html>
-<html lang="id">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Barakah Kurma Store</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Barakah Kurma Store | Responsive</title>
+</head>
 <body>
+
     <!-- Header Section -->
     <header class="site-header">
-        <div class="logo">
-            <img src="logo.jpg" alt="Barakah Kurma Store Logo">
+        <div class="logo-header">
+            <img src="Barakah Kurma Store.png" alt="Logo">
         </div>
-        <nav class="main-navigation">
-            <button>Jenis Kurma</button>
-            <button>Cek Keranjang</button>
-            <button>Tentang Kami</button>
-            <button>Kontak</button>
-        </nav>
+
+        <nav>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#" class="nav-link">Cek Keranjang</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Jenis Kurma</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Tentang Kami</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Kontak</a></li>
+            </ul>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <h1>Barakah Kurma Store</h1>
-        <p>Udah mau bulan ramadhan tapi bingung mau beli kurma di mana?</p>
-        <p> Tenang aja sobat, disini kamu bisa menemukan berbagai jenis kurma yang kamu inginkan loh</p>
-        <button id="pesan-sekarang">YUK PESAN SEKARANG</button>
+    <!-- Halaman Utama -->
+    <main class="main-section">
+        <section class="store-header">
+            <h1 class="store-title">Barakah Kurma Store</h1>
+        </section>
+        <section class="store-description">
+            <p class="text-main">Udah mau bulan ramadhan tapi bingung mau beli kurma di mana?</p>
+            <p class="text-main">Tenang aja sobat, disini kamu bisa menemukan berbagai jenis kurma yang kamu inginkan loh</p>
+        </section>
+        <div class="tombol-main">
+            <a href="#" class="pesan-sekarang">YUK PESAN SEKARANG</a>
+        </div>
     </main>
 
     <!-- Review Section -->
-<section class="review-section">
-    <div class="rating-section">
-        <span>4,5</span>
-        <div class="stars">
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star"></div>
-            <div class="star half-star"></div>
+    <section class="review-section">
+        <div class="rating-section">
+            <span class="rating-score">4,5</span>
+            <div class="stars">
+                ★★★★☆
+            </div>
+            <span class="review-platform">Google Review</span>
         </div>
-        <span>Google Review</span>
-    </div>
-</section>
-
-<!-- About Section -->
-<section id="tentang-kami" class="about">
-    <div class="content-container">
-        <div class="text-section">
-            <h2>Barakah Kurma Store?</h2>
-            <p>Sebuah website yang menjual berbagai jenis kurma lokal dan impor yang sudah terjamin legalitas dan kualitas.</p>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="content-about">
+            <div class="judul-about">
+                <h2><span>Barakah Kurma Store?</span></h2>
+            </div>
+            <div class="text-about">
+                <p>Sebuah website yang menjual berbagai jenis kurma lokal dan impor yang sudah terjamin legalitas dan kualitas.</p>
+            </div>
         </div>
-        <div class="video-section">
+        <div class="video-about-section">
             <iframe class="video-embed" src="https://www.youtube.com/embed/XavzFjJUo5M?si=XgFHcTsHkhyI80Cz" title="Barakah Kurma Store Video"></iframe>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Benefits Section -->
-<section class="benefits-section">
-    <div class="benefit-container">
-        <h1>Keuntungan Belanja di Barakah Kurma Store</h1>
-        <div class="benefit-row">
-            <div class="benefit-item">
-                <i class="fa-solid fa-crown"></i>
+    <!-- Benefit Section -->
+    <section class="benefit-section">
+    <div class="title-benefit">
+        <h2>Keuntungan Belanja di Barakah Kurma Store</h2>
+    </div>
+
+    <div class="bg-poin-benefit">
+        <!-- Poin Benefit 1 -->
+        <div class="halaman-poin-benefit">
+            <div class="poin-benefit">
+                <div class="kotak-icon-benefit">
+                    <i class="fa-solid fa-comment" style="color: #ffffff;"></i>
+                </div>
                 <h3>Kualitas Kurma yang terjamin</h3>
+            </div>
+            <div class="sub-poin-benefit">
                 <p>Kami siap menjual kurma dengan kualitas yang tidak diragukan, seperti:</p>
-                <ul>
+                <ul class="list-benefit">
                     <li>Kadaluarsa yang sangat panjang</li>
                     <li>Kurma legal</li>
                     <li>Asli dari kebun</li>
                     <li>Bukan hasil nyolong</li>
                 </ul>
             </div>
-            <div class="benefit-item">
-                <i class="fa-solid fa-truck-fast"></i>
+        </div>
+
+        <!-- Poin Benefit 2 -->
+        <div class="halaman-poin-benefit">
+            <div class="poin-benefit">
+                <div class="kotak-icon-benefit">
+                    <i class="fa-solid fa-comment" style="color: #ffffff;"></i>
+                </div>
                 <h3>Keamanan dalam pengiriman</h3>
+            </div>
+            <div class="sub-poin-benefit">
                 <p>Kami menggunakan jasa pengiriman yang gak abal-abalan, seperti:</p>
-                <ul>
+                <ul class="list-benefit">
                     <li>JNT</li>
                     <li>JNE</li>
                     <li>Tiki</li>
                     <li>SiCepat</li>
                 </ul>
             </div>
-            <div class="benefit-item">
-                <i class="fa-solid fa-shield-halved"></i>
+        </div>
+
+        <!-- Poin Benefit 3 -->
+        <div class="halaman-poin-benefit">
+            <div class="poin-benefit">
+                <div class="kotak-icon-benefit">
+                    <i class="fa-solid fa-comment" style="color: #ffffff;"></i>
+                </div>
                 <h3>Promo diskon meriah</h3>
+            </div>
+            <div class="sub-poin-benefit">
                 <p>Dapatkan promo guncang di toko kami setiap:</p>
-                <ul>
+                <ul class="list-benefit">
                     <li>Awal Tahun</li>
                     <li>Bulan Ramadhan</li>
                     <li>Perayaan ulang tahun Barakah Kurma Store</li>
@@ -98,145 +127,178 @@
                 </ul>
             </div>
         </div>
-        <div class="benefit-row">
-            <div class="benefit-item">
-                <i class="fa-solid fa-layer-group"></i>
+    </div>
+
+    <div class="bg-poin-benefit">
+        <!-- Poin Benefit 4 -->
+        <div class="halaman-poin-benefit">
+            <div class="poin-benefit">
+                <div class="kotak-icon-benefit">
+                    <i class="fa-solid fa-comment" style="color: #ffffff;"></i>
+                </div>
                 <h3>Varian kurma yang lengkap</h3>
-                <p>Kami menyediakan berbagai macam kurma lokal dan impor</p>
-                <ul>
+            </div>
+            <div class="sub-poin-benefit">
+                <p>Kami menyediakan berbagai macam kurma lokal dan impor, seperti:</p>
+                <ul class="list-benefit">
                     <li>Kurma Ajwa</li>
                     <li>Kurma Sukari</li>
                     <li>Kurma Muda</li>
                     <li>Dll.</li>
                 </ul>
             </div>
-            <div class="benefit-item">
-                <i class="fa-solid fa-coins"></i>
+        </div>
+
+        <!-- Poin Benefit 5 -->
+        <div class="halaman-poin-benefit">
+            <div class="poin-benefit">
+                <div class="kotak-icon-benefit">
+                    <i class="fa-solid fa-comment" style="color: #ffffff;"></i>
+                </div>
                 <h3>Gratis Ongkir</h3>
+            </div>
+            <div class="sub-poin-benefit">
                 <p>Promo ini berlaku bagi pelanggan Barakah Kurma Store yang memenuhi kriteria tersebut:</p>
-                <ul>
+                <ul class="list-benefit">
                     <li>Berada di area Jabodetabek</li>
                     <li>Pembelian min. 3 KG Kurma</li>
-                    <li>Wakaf kurma untuk masjid atau pondok pesantren.</li>
+                    <li>Wakaf kurma untuk masjid atau pondok pesantren</li>
                 </ul>
             </div>
-            <div class="benefit-item">
-                <i class="fa-solid fa-money-bill-transfer"></i>
+        </div>
+
+        <!-- Poin Benefit 6 -->
+        <div class="halaman-poin-benefit">
+            <div class="poin-benefit">
+                <div class="kotak-icon-benefit">
+                    <i class="fa-solid fa-comment" style="color: #ffffff;"></i>
+                </div>
                 <h3>100% Garansi Uang Kembali</h3>
+            </div>
+            <div class="sub-poin-benefit">
                 <p>Uang kamu InsyaAllah terjamin 100% kembali apabila menemukan seperti ini</p>
-                <ul>
+                <ul class="list-benefit">
                     <li>Kurma yang mulai membusuk</li>
                     <li>Produk yang ilegal (palsu)</li>
                     <li>Pengamanan paket yang kurang</li>
-                    <li>Dll.</li>
                 </ul>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Testimonials Section -->
-<section class="testimonials-section">
-    <h2>Testimoni Pelanggan</h2>
-    <div class="testimonial-container">
-        <div class="testimonial-item">
-            <img src="Shino.jpeg" alt="Shino">
-            <h3>Shino</h3>
-            <p class="job-title">Tukang Benerin Website</p>
-            <p>Pengiriman cepat, kualitas oke banget</p>
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="title-testimonials">
+            <h2>Testimoni Pelanggan</h2>
         </div>
-        <div class="testimonial-item">
-            <img src="Budi.jpeg" alt="Budi">
-            <h3>Budi</h3>
-            <p class="job-title">Tukang sapu</p>
-            <p>Enak banget, rasanya udah kayak naik haji</p>
-        </div>
-        <div class="testimonial-item">
-            <img src="Siti.jpeg" alt="Siti">
-            <h3>Siti</h3>
-            <p class="job-title">Emak Warkop</p>
-            <p>Murah, enak, bergizi</p>
-        </div>
-        <div class="testimonial-item">
-            <img src="Andrianii.jpg" alt="Andriani">
-            <h3>Andriani</h3>
-            <p class="job-title">Tukang Cuci Baju</p>
-            <p>Beli kurma disini gak akan pernah nyesel</p>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ Section -->
-<section class="faq-section">
-    <div class="text-section-faq">
-        <h2>Pertanyaan yang sering ditanyakan</h2>
-    </div>
-    <div class="faq-container">
-        <div class="faq-item">
-            <h3>Q: Apakah kurma yang dijual ini hasil nyolong?</h3>
-            <p>A: gak kok, InsyaAllah kita menjual kurma nya langsung dari kebun milik kita, bukan dari tetangga sebelah :v</p>
-        </div>
-        <div class="faq-item">
-            <h3>Q: Apakah kurmanya masih seger?</h3>
-            <p>A: InsyaAllah masih seger kok, gak basi</p>
-        </div>
-        <div class="faq-item">
-            <h3>Q: Kok mahal banget harganya?</h3>
-            <p>A: ya kalo mau yang murah bukan disini tempatnya</p>
-        </div>
-        <div class="faq-item">
-            <h3>Q: Kalo kurma goreng ada gak kak?</h3>
-            <p>A: gak ada, terimakasih</p>
-        </div>
-    </div>
-</section>
-
-<!-- Donatur Section -->
-<section class="donatur-section">
-    <div class="content-container">
-        <div class="text-section">
-            <h1>Formulir Donatur Barakah Kurma</h1>
-            <p>Ayo jadi donatur di Barakah Kurma Store! Sumbangkan kurma yang kamu beli untuk ifthar di seluruh Indonesia.</p>
-        </div>
-        <div class="button-section">
-            <button id="donatur-sekarang">YUK MENJADI DONATUR SEKARANG</button>
-        </div>
-    </div>
-</section>
-
-<!-- Footer Section -->
-<footer class="site-footer">
-    <div class="footer-container">
-        <div class="footer-section">
-            <h4>Tentang kami</h4>
-            <p>Sebuah website yang menjual berbagai jenis kurma lokal dan impor yang sudah terjamin legalitas dan kualitas.</p>
-        </div>
-        <div class="footer-section">
-            <h4>Informasi Kontak</h4>
-            <div class="contact-item">
-                <i class="fa-solid fa-envelope"></i>
-                <span>ahsanifadhliilahi@mail.ugm.ac.id</span>
+    
+        <div class="testimonial-container">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-item">
+                <img src="user.jpg" alt="Shino">
+                <p class="name">Shino</p>
+                <p class="profession">Tukang Benerin Website</p>
+                <p class="review">Pengiriman cepat, kualitas oke banget</p>
             </div>
-            <div class="contact-item">
-                <i class="fa-solid fa-phone"></i>
-                <span>+(62)82123503751</span>
+    
+            <!-- Testimonial 2 -->
+            <div class="testimonial-item">
+                <img src="user.jpg" alt="Budi">
+                <p class="name">Budi</p>
+                <p class="profession">Tukang sapu</p>
+                <p class="review">Enak banget, rasanya udah kayak naik haji</p>
             </div>
-            <div class="contact-item">
-                <i class="fa-solid fa-location-dot"></i>
-                <span>Jl. Ngawi Selatan, BSD, Los Angeles</span>
+    
+            <!-- Testimonial 3 -->
+            <div class="testimonial-item">
+                <img src="user.jpg" alt="Siti">
+                <p class="name">Siti</p>
+                <p class="profession">Emak Warkop</p>
+                <p class="review">Murah, enak, bergizi</p>
+            </div>
+    
+            <!-- Testimonial 4 -->
+            <div class="testimonial-item">
+                <img src="user.jpg" alt="Andriani">
+                <p class="name">Andriani</p>
+                <p class="profession">Tukang Cuci Baju</p>
+                <p class="review">Beli kurma disini gak akan pernah nyesel</p>
             </div>
         </div>
-        <div class="footer-section">
-            <h4>Legal Pages</h4>
-            <ul>
-                <li><a href="#">Terms of use,</a></li>
-                <li><a href="#">Disclaimer,</a></li>
-                <li><a href="#">Privacy policy,</a></li>
-                <li><a href="#">Cookie Policy.</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
+    </section>
 
+    <!-- Halaman FAQ -->
+     <section class="faq-section">
+        <div class="title-faq">
+            <h2>Pertanyaan yang sering ditanyakan</h2>
+        </div>
+
+        <div class="kotak-faq">
+            <div class="q-faq"><h3>Q: Apakah kurma yang dijual ini hasil nyolong?</h3></div>
+            <div class="a-faq">A: gak kok, InsyaAllah kita menjual kurma nya langsung dari kebun milik kita, bukan dari tetangga sebelah :v</div>
+        </div>
+
+        <div class="kotak-faq">
+            <div class="q-faq"><h3>Q: Apakah kurmanya masih seger?</h3></div>
+            <div class="a-faq">A: InsyaAllah masih seger kok, gak basi</div>
+        </div>
+
+        <div class="kotak-faq">
+            <div class="q-faq"><h3>Q: Kok mahal banget harganya?</h3></div>
+            <div class="a-faq">A: ya kalo mau yang murah bukan disini tempatnya</div>
+        </div>
+
+        <div class="kotak-faq">
+            <div class="q-faq"><h3>Q: Kalo kurma goreng ada gak kak?</h3></div>
+            <div class="a-faq">A:  gak ada, terimakasih</div>
+        </div>
+
+     </section>
+
+     <!-- Halaman Donasi -->
+      <section class="donation-section">
+        <div class="layout-donation">
+            <div class="title-and-sub-donation">
+                <div class="title-donation"><h2>Formulir Donatur Barakah Kurma</h2></div>
+                <div class="sub-donation">Ayo jadi donatur di Barakah Kurma Store! Sumbangkan kurma yang kamu beli untuk ifthar di seluruh Indonesia.</div>
+            </div>
+            <div class="button-donation">YUK MENJADI DONATUR SEKARANG</div>
+        </div>
+      </section>
+
+      <!-- Footer Section -->
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h4>Tentang kami</h4>
+                    <p>Sebuah website yang menjual berbagai jenis kurma lokal dan impor yang sudah terjamin legalitas dan kualitas.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Informasi Kontak</h4>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>ahsanifadhliilahi@mail.ugm.ac.id</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+(62)82123503751</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Jl. Ngawi Selatan, BSD, Los Angeles</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal Pages</h4>
+                    <ul>
+                        <li><a href="#">Terms of use,</a></li>
+                        <li><a href="#">Disclaimer,</a></li>
+                        <li><a href="#">Privacy policy,</a></li>
+                        <li><a href="#">Cookie Policy.</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
 </body>
 </html>
